@@ -44,28 +44,28 @@ getMealButton.onclick = () => {
 };
 
 const MealIngredientLoader = (food) => {
-  const ingredientArray = []; // Initialize an empty array to hold the ingredients
-  let count = 1; // Initialize a counter for the ingredient names
-  while (true) { // Loop until there are no more ingredients
-    const ingredient = food[`strIngredient${count}`]; // Get the name of the current ingredient
-    if (!ingredient) { // If there are no more ingredients, exit the loop
+  const ingredientArray = []; 
+  let count = 1; 
+  while (true) { 
+    const ingredient = food[`strIngredient${count}`]; 
+    if (!ingredient) { 
       break;
     }
-    ingredientArray.push(ingredient); // Add the ingredient name to the array
-    count++; // Increment the counter
+    ingredientArray.push(ingredient); 
+    count++; 
   }
-  console.log(ingredientArray); // Print the array of ingredient names to the console (for debugging purposes)
+  console.log(ingredientArray);
 
-  ingredientBox.innerHTML = ""; // Clear the ingredient box
-  const heading = document.createElement("h1"); // Create a new heading element
-  heading.textContent = `${food.strMeal} Ingredients`; // Set the text content of the heading to include the meal name
-  ingredientBox.appendChild(heading); // Add the heading to the ingredient box
-  heading.style.cssText = // Add some CSS styles to the heading
+  ingredientBox.innerHTML = "";
+  const heading = document.createElement("h1"); 
+  heading.textContent = `${food.strMeal} Ingredients`; 
+  ingredientBox.appendChild(heading);
+  heading.style.cssText = 
     "text-align: center; text-decoration: underline; text-underline-offset: 0.2em;";
-  ingredientArray.forEach((el) => { // Loop through the array of ingredients
-    const ele = document.createElement("li"); // Create a new list item element
-    ele.textContent = el; // Set the text content of the list item to the ingredient name
-    ingredientBox.appendChild(ele); // Add the list item to the ingredient box
+  ingredientArray.forEach((el) => { 
+    const ele = document.createElement("li"); 
+    ele.textContent = el; 
+    ingredientBox.appendChild(ele); 
   });
 };
 
@@ -143,7 +143,7 @@ var options = "";
 function handleBtnClick(btn, placeholder, option, otherBtn, btnText, otherBtnHandler) {
 
   if (selectedBtn === btn) {
-    inputBox.placeholder = "Search any meal...";
+    inputBox.placeholder = "Search. eg: chicken";
     options = "";
     selectedBtn = null;
   

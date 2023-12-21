@@ -154,25 +154,6 @@ body {
     color: #000000;
   }
   
-  .special-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 72px;
-    gap: 24px;
-    height: 70%;
-  }
-  .special-btn button {
-    background-color: rgb(255, 254, 246);
-    color: rgb(0, 0, 0);
-    height: 56px;
-    border-radius: 8px;
-    font-size: 15px;
-    padding: 8px;
-    border: 0;
-    font-weight: 600;
-    width: 120px;
-  }
   .searched-results-div{
       margin-bottom: 5%;
   }
@@ -228,7 +209,7 @@ body {
       text-align: center;
       font-size: 16px;
       font-weight: bold;
-      color: rgb(0, 0, 0); /* or another color that contrasts with the background */
+      color: rgb(0, 0, 0); 
       cursor: pointer;
     }
     
@@ -264,15 +245,7 @@ body {
     left: -40px;
     top: 15px;
   }
-  .options {
-    display: flex;
-    justify-content: flex-end;
-    gap: 8px;
-  }
- 
-  .show {
-    display: block;
-  }
+  
   @media screen and (max-width: 600px) {
       
       main h1 {
